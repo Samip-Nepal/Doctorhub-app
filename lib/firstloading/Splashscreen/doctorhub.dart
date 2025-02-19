@@ -1,7 +1,25 @@
+import 'package:doctor_app_pratice/firstloading/Splashscreen/doccure.dart';
 import 'package:flutter/material.dart';
 
-class Doctorhub extends StatelessWidget {
+class Doctorhub extends StatefulWidget {
   const Doctorhub({super.key});
+
+  @override
+  State<Doctorhub> createState() => _DoctorhubState();
+}
+
+class _DoctorhubState extends State<Doctorhub> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 1), () {
+      Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Doccure(),
+          ));
+    });
+  }
 
   @override
   Widget build(BuildContext context) {

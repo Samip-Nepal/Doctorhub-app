@@ -76,9 +76,9 @@ class _SeamlessdoctorState extends State<Page6> {
                 padding: EdgeInsets.fromLTRB(80, 0, 70, 0),
                 child: Column(
                   children: [
-                    buildRadioButton("Patient"),
-                    buildRadioButton("Doctor"),
-                    buildRadioButton("Pharm"),
+                    buildRadioButton(value: "Patient"),
+                    buildRadioButton(value: "Doctor"),
+                    buildRadioButton(value: "Pharm"),
                   ],
                 ),
               ),
@@ -86,7 +86,15 @@ class _SeamlessdoctorState extends State<Page6> {
           ]),
         ),
         floatingActionButton: FloatingActionButton.small(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const Demopage(
+                        text: "Hello there",
+                      )),
+            );
+          },
           backgroundColor: Colors.blueAccent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
@@ -98,7 +106,7 @@ class _SeamlessdoctorState extends State<Page6> {
         ));
   }
 
-  Widget buildRadioButton(String value) {
+  Widget buildRadioButton({required String value}) {
     return (RadioListTile<String>(
       value: value,
       groupValue: setOption,
@@ -117,5 +125,28 @@ class _SeamlessdoctorState extends State<Page6> {
       ),
       activeColor: Colors.blue,
     ));
+  }
+}
+
+class Demopage extends StatelessWidget {
+  final String text;
+  const Demopage({super.key, required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pop(
+              context,
+            );
+          },
+          child: Text(
+            text,
+          ),
+        ),
+      ),
+    );
   }
 }
