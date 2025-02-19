@@ -86,15 +86,7 @@ class _SeamlessdoctorState extends State<Page6> {
           ]),
         ),
         floatingActionButton: FloatingActionButton.small(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const Demopage(
-                        text: "Hello there",
-                      )),
-            );
-          },
+          onPressed: () {},
           backgroundColor: Colors.blueAccent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),
@@ -125,28 +117,5 @@ class _SeamlessdoctorState extends State<Page6> {
       ),
       activeColor: Colors.blue,
     ));
-  }
-}
-
-class Demopage extends StatelessWidget {
-  final String text;
-  const Demopage({super.key, required this.text});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: GestureDetector(
-          onTap: () {
-            Navigator.pop(
-              context,
-            );
-          },
-          child: Text(
-            text,
-          ),
-        ),
-      ),
-    );
   }
 }

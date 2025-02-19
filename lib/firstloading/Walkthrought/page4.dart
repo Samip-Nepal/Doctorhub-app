@@ -1,13 +1,15 @@
+import 'package:doctor_app_pratice/firstloading/page5.dart';
+import 'package:doctor_app_pratice/main.dart';
 import 'package:flutter/material.dart';
 
-class Page5 extends StatefulWidget {
-  const Page5({super.key});
+class Page4 extends StatefulWidget {
+  const Page4({super.key});
 
   @override
-  State<Page5> createState() => _SeamlessdoctorState();
+  State<Page4> createState() => _SeamlessdoctorState();
 }
 
-class _SeamlessdoctorState extends State<Page5> {
+class _SeamlessdoctorState extends State<Page4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,8 +23,8 @@ class _SeamlessdoctorState extends State<Page5> {
             ),
             SizedBox(
               height: 359,
-              width: 342,
-              child: Image.asset('assets/Delivery5.png'),
+              width: 314,
+              child: Image.asset('assets/Pag4.png'),
             ),
             SizedBox(
               height: 15,
@@ -37,9 +39,9 @@ class _SeamlessdoctorState extends State<Page5> {
                     width: 300,
                     height: 80,
                     child: Text(
-                      'Find Pharmacies Nearby',
+                      'Medications at Your Doorsteps',
                       style: TextStyle(
-                        fontSize: 27,
+                        fontSize: 28,
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontFamily: 'Bold',
@@ -56,8 +58,7 @@ class _SeamlessdoctorState extends State<Page5> {
                     child: Opacity(
                       opacity: 0.7,
                       child: Text(
-                        'Need a pharmacy? Our platform locates the nearest ones'
-                        'for you. Prioritize your comfort.',
+                        'Say goodbye to pharmacy lines. Enjoy the convenience of hassle-free medication.',
                         style: TextStyle(
                           fontSize: 17,
                           color: Colors.black45,
@@ -80,17 +81,23 @@ class _SeamlessdoctorState extends State<Page5> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'Skip',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: 'Poppins',
-                        color: Colors.grey,
-                        shadows: [
-                          Shadow(
-                            blurRadius: 0,
-                          ),
-                        ]),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (contect) => MainPage()));
+                    },
+                    child: Text(
+                      'Skip',
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'Poppins',
+                          color: Colors.grey,
+                          shadows: [
+                            Shadow(
+                              blurRadius: 0,
+                            ),
+                          ]),
+                    ),
                   ),
                   Container(
                     padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
@@ -98,14 +105,22 @@ class _SeamlessdoctorState extends State<Page5> {
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: ". ",
+                            text: '. ',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.grey,
+                            ),
+                          ),
+                          TextSpan(
+                            text: ".",
                             style: TextStyle(
                                 color: Colors.blue,
                                 fontSize: 21,
                                 fontWeight: FontWeight.bold),
                           ),
                           TextSpan(
-                            text: '. . .',
+                            text: ' . .',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
@@ -116,12 +131,18 @@ class _SeamlessdoctorState extends State<Page5> {
                       ),
                     ),
                   ),
-                  Text(
-                    'Next',
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.blueAccent,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Page5()));
+                    },
+                    child: Text(
+                      'Next',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent,
+                      ),
                     ),
                   ),
                 ],
