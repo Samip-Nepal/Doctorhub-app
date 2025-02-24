@@ -32,7 +32,7 @@ class _DoctorhubState extends State<Doctorhub> {
               SizedBox(
                 height: 115.52,
                 width: 107.04,
-                child: Image.asset('assets/Logo.png'),
+                child: Image.asset('assets/splash/Logo.png'),
               ),
               SizedBox(
                 height: 8,
@@ -40,7 +40,7 @@ class _DoctorhubState extends State<Doctorhub> {
               SizedBox(
                 height: 61,
                 width: 350,
-                child: Image.asset('assets/Logo Text.png'),
+                child: Image.asset('assets/splash/Logo Text.png'),
               ),
             ],
           ),

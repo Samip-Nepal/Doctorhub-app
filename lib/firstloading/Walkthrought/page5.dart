@@ -1,5 +1,4 @@
-import 'package:doctor_app_pratice/firstloading/page6.dart';
-import 'package:doctor_app_pratice/main.dart';
+import 'package:doctor_app_pratice/firstloading/Walkthrought/Role/page6.dart';
 import 'package:flutter/material.dart';
 
 class Page5 extends StatefulWidget {
@@ -24,7 +23,7 @@ class _SeamlessdoctorState extends State<Page5> {
             SizedBox(
               height: 359,
               width: 342,
-              child: Image.asset('assets/Delivery5.png'),
+              child: Image.asset('assets/splash/Delivery5.png'),
             ),
             SizedBox(
               height: 15,
@@ -85,7 +84,7 @@ class _SeamlessdoctorState extends State<Page5> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (contect) => MainPage()));
+                          MaterialPageRoute(builder: (contect) => Page6()));
                     },
                     child: Text(
                       'Skip',

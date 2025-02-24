@@ -1,14 +1,15 @@
+import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage.dart';
 import 'package:doctor_app_pratice/firstloading/Splashscreen/doccure.dart';
 import 'package:doctor_app_pratice/firstloading/Splashscreen/doctorhub.dart';
-import 'package:doctor_app_pratice/firstloading/page3.dart';
-import 'package:doctor_app_pratice/firstloading/page4.dart';
-import 'package:doctor_app_pratice/firstloading/page5.dart';
-import 'package:doctor_app_pratice/firstloading/page6.dart';
+import 'package:doctor_app_pratice/firstloading/Walkthrought/Role/page6.dart';
+import 'package:doctor_app_pratice/firstloading/Walkthrought/page3.dart';
+import 'package:doctor_app_pratice/firstloading/Walkthrought/page4.dart';
+import 'package:doctor_app_pratice/firstloading/Walkthrought/page5.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Doctorhub(),
+    home: Loginpage(),
     routes: {
       'page1': (context) => Doccure(),
       'page2': (context) => Doctorhub(),

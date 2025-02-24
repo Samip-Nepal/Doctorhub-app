@@ -1,3 +1,4 @@
+import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage.dart';
 import 'package:flutter/material.dart';
 
 class Page6 extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SeamlessdoctorState extends State<Page6> {
             SizedBox(
               height: 200,
               width: 330,
-              child: Image.asset('assets/page6.png'),
+              child: Image.asset('assets/splash/page6.png'),
             ),
             SizedBox(
               height: 40,
@@ -86,7 +87,10 @@ class _SeamlessdoctorState extends State<Page6> {
           ]),
         ),
         floatingActionButton: FloatingActionButton.small(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (context) => Loginpage()));
+          },
           backgroundColor: Colors.blueAccent,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(50),

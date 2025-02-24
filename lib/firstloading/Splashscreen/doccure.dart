@@ -1,4 +1,4 @@
-import 'package:doctor_app_pratice/firstloading/page3.dart';
+import 'package:doctor_app_pratice/firstloading/Walkthrought/page3.dart';
 import 'package:flutter/material.dart';
 
 class Doccure extends StatefulWidget {
@@ -29,7 +29,7 @@ class _DoccureState extends State<Doccure> {
               SizedBox(
                 height: 182.52,
                 width: 326.04,
-                child: Image.asset('assets/doccure.png'),
+                child: Image.asset('assets/splash/doccure.png'),
               ),
             ],
           ),
