@@ -1,4 +1,3 @@
-import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage.dart';
 import 'package:doctor_app_pratice/firstloading/Splashscreen/doccure.dart';
 import 'package:doctor_app_pratice/firstloading/Splashscreen/doctorhub.dart';
 import 'package:doctor_app_pratice/firstloading/Walkthrought/Role/page6.dart';
@@ -9,7 +8,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Loginpage(),
+    home: Doctorhub(),
     routes: {
       'page1': (context) => Doccure(),
       'page2': (context) => Doctorhub(),
@@ -21,14 +20,9 @@ void main() {
   ));
 }
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class MainPage extends StatelessWidget {
+  MainPage({super.key});
 
-  @override
-  State<MainPage> createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
   final PageController pageController = PageController();
 
   @override

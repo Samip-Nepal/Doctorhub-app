@@ -1,5 +1,6 @@
-import 'package:doctor_app_pratice/User-Auth/loginpage/logincomponent/my_textfeild.dart';
-import 'package:doctor_app_pratice/User-Auth/loginpage/logincomponent/mybutton.dart';
+import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage,component/my_textfeild.dart';
+import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage,component/mybutton.dart';
+import 'package:doctor_app_pratice/User-Auth/loginpage/signuppage/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class Loginpage extends StatefulWidget {
@@ -13,7 +14,7 @@ class _LoginpageState extends State<Loginpage> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
 
-  bool _obscureText = true;
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -54,13 +55,9 @@ class _LoginpageState extends State<Loginpage> {
               MyTextfeild(
                 controller: passwordController,
                 hintText: ('Password'),
-                obsscureText: _obscureText,
+           obsscureText: true,
                 image: Image.asset('assets/user-auth/LOCK.png'),
-                toggle: () {
-                  setState(() {
-                    _obscureText = !_obscureText;
-                  });
-                },
+             
               ),
               SizedBox(
                 height: 10,
@@ -75,7 +72,7 @@ class _LoginpageState extends State<Loginpage> {
                       child: Text(
                         'Forgot Password',
                         style: TextStyle(
-                            color: Colors.blue, fontWeight: FontWeight.bold),
+                            color: const Color.fromARGB(255, 0, 140, 255), fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],
@@ -115,7 +112,10 @@ class _LoginpageState extends State<Loginpage> {
                   children: [
                     Text("Don't have an account? "),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (context) => SignUp()));
+                      },
                       child: Text(
                         'Sign up',
                         style: TextStyle(
