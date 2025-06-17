@@ -8,7 +8,8 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Doctorhub(),
+    debugShowCheckedModeBanner: false,
+    home:Doctorhub() ,
     routes: {
       'page1': (context) => Doccure(),
       'page2': (context) => Doctorhub(),

@@ -1,3 +1,4 @@
+import 'package:doctor_app_pratice/User-Auth/loginpage/forgetpassword/forgotpassword.dart';
 import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage,component/my_textfeild.dart';
 import 'package:doctor_app_pratice/User-Auth/loginpage/loginpage,component/mybutton.dart';
 import 'package:doctor_app_pratice/User-Auth/loginpage/signuppage/sign_up.dart';
@@ -13,8 +14,6 @@ class Loginpage extends StatefulWidget {
 class _LoginpageState extends State<Loginpage> {
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
-
- 
 
   @override
   Widget build(BuildContext context) {
@@ -55,9 +54,8 @@ class _LoginpageState extends State<Loginpage> {
               MyTextfeild(
                 controller: passwordController,
                 hintText: ('Password'),
-           obsscureText: true,
+                obsscureText: true,
                 image: Image.asset('assets/user-auth/LOCK.png'),
-             
               ),
               SizedBox(
                 height: 10,
@@ -68,11 +66,17 @@ class _LoginpageState extends State<Loginpage> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Forgotpassword()));
+                      },
                       child: Text(
                         'Forgot Password',
                         style: TextStyle(
-                            color: const Color.fromARGB(255, 0, 140, 255), fontWeight: FontWeight.bold),
+                            color: const Color.fromARGB(255, 0, 140, 255),
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ],

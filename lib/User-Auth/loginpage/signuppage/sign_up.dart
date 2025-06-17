@@ -19,16 +19,19 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
         body: SafeArea(
       child: Center(
+        
         child: Column(
           children: [
+
             SizedBox(
               height: 50.67,
             ),
             SizedBox(
               height: 170.86,
-              width: 550,
+              width: 560,
               child: Image.asset('assets/signuppage/Refer a friend.png'),
             ),
             Container(

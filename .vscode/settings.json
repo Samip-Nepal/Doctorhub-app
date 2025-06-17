@@ -1,4 +1,5 @@
 {
     "dart.hotReloadOnSave": "allIfDirty",
-    "dart.flutterGenerateLocalizationsOnSave": "all"
+    "dart.flutterGenerateLocalizationsOnSave": "all",
+    "cmake.sourceDirectory": "/Users/samipnepal/Documents/Flutter/doctor_app_pratice/linux"
 }
