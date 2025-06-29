@@ -17,6 +17,10 @@ class MyTextfeild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Padding(
       padding: EdgeInsets.fromLTRB(50, 5, 50, 0),
       child: TextField(
@@ -28,8 +32,8 @@ class MyTextfeild extends StatelessWidget {
             prefixIcon: Padding(
               padding: EdgeInsets.all(3),
               child: SizedBox(
-                height: 5,
-                width: 5,
+                height: designPixelToHeight(5),
+                width: designPixelToWidth(5),
                 child: image,
               ),
             ),

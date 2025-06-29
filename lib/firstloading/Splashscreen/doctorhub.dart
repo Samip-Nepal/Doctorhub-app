@@ -23,6 +23,11 @@ class _DoctorhubState extends State<Doctorhub> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Scaffold(
         backgroundColor: Colors.blue,
         body: Center(
@@ -30,16 +35,16 @@ class _DoctorhubState extends State<Doctorhub> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 115.52,
-                width: 107.04,
+                height: designPixelToHeight(115.52),
+                width: designPixelToWidth(107.04),
                 child: Image.asset('assets/splash/Logo.png'),
               ),
               SizedBox(
-                height: 8,
+                height: designPixelToHeight(8),
               ),
               SizedBox(
-                height: 61,
-                width: 350,
+                height: designPixelToHeight(61),
+                width: designPixelToWidth(350),
                 child: Image.asset('assets/splash/Logo Text.png'),
               ),
             ],

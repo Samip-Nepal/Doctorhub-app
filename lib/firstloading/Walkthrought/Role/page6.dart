@@ -12,34 +12,40 @@ class _SeamlessdoctorState extends State<Page6> {
   String setOption = "Doctor";
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
+
     return Scaffold(
         backgroundColor: Colors.white,
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             SizedBox(
-              height: 140,
+              height: designPixelToHeight(140),
             ),
             SizedBox(
-              height: 200,
-              width: 330,
+              height: designPixelToHeight(200),
+              width: designPixelToWidth(330),
               child: Image.asset('assets/splash/page6.png'),
             ),
             SizedBox(
-              height: 40,
+              height: designPixelToHeight(40),
             ),
             SizedBox(
-              width: 340,
-              height: 200,
+              width: designPixelToWidth(340),
+              height: designPixelToHeight(200),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    width: 300,
-                    height: 50,
+                    width: designPixelToWidth(310),
+                    height: designPixelToHeight(50),
                     child: Text(
                       'Tailor Your Experience',
                       style: TextStyle(
-                        fontSize: 26,
+                        fontSize: designPixelToHeight(28),
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontFamily: 'Bold',
@@ -48,18 +54,18 @@ class _SeamlessdoctorState extends State<Page6> {
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: designPixelToHeight(40),
                   ),
                   SizedBox(
-                    width: 280,
-                    height: 100,
+                    width: designPixelToWidth(290),
+                    height: designPixelToHeight(110),
                     child: Opacity(
                       opacity: 0.7,
                       child: Text(
                         'To provide you with good experience , please select'
                         'your role below',
                         style: TextStyle(
-                          fontSize: 17,
+                          fontSize: designPixelToHeight(20),
                           color: Colors.black45,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Poppins',

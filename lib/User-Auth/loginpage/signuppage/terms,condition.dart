@@ -10,9 +10,13 @@ class Terms extends StatefulWidget {
 class _TermsState extends State<Terms> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Container(
-      width: 330,
-      height: 50,
+      width: designPixelToWidth(330),
+      height: designPixelToHeight(50),
       margin: EdgeInsets.symmetric(horizontal: 35),
       child: RichText(
           text: TextSpan(
@@ -21,7 +25,7 @@ class _TermsState extends State<Terms> {
             text: 'By signing up, you agree to our ',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 13,
+              fontSize: designPixelToHeight(13),
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w800,
             ),
@@ -30,7 +34,7 @@ class _TermsState extends State<Terms> {
             text: 'Terms & Conditions',
             style: TextStyle(
               color: Colors.blue,
-              fontSize: 13,
+              fontSize: designPixelToHeight(13),
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w800,
             ),
@@ -39,7 +43,7 @@ class _TermsState extends State<Terms> {
             text: ' and',
             style: TextStyle(
               color: Colors.black,
-              fontSize: 13,
+              fontSize: designPixelToHeight(13),
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w800,
             ),
@@ -48,7 +52,7 @@ class _TermsState extends State<Terms> {
             text: ' Privacy Policy',
             style: TextStyle(
               color: Colors.blue,
-              fontSize: 13,
+              fontSize: designPixelToHeight(13),
               fontFamily: 'Poppins',
               fontWeight: FontWeight.w800,
             ),

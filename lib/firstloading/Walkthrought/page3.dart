@@ -11,6 +11,11 @@ class Page3 extends StatefulWidget {
 class _SeamlessdoctorState extends State<Page3> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -18,29 +23,29 @@ class _SeamlessdoctorState extends State<Page3> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              height: 97,
+              height: designPixelToHeight(97),
             ),
             SizedBox(
-              height: 359,
-              width: 314,
+              height: designPixelToHeight(359),
+              width: designPixelToWidth(314),
               child: Image.asset('assets/splash/Page3logo.png'),
             ),
             SizedBox(
-              height: 15,
+              height: designPixelToHeight(15),
             ),
             SizedBox(
-              width: 300,
-              height: 220,
+              width: designPixelToWidth(300),
+              height: designPixelToHeight(220),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
-                    width: 300,
-                    height: 80,
+                    width: designPixelToWidth(300),
+                    height: designPixelToHeight(80),
                     child: Text(
                       'Seamless Doctor Connections',
                       style: TextStyle(
-                        fontSize: 29,
+                        fontSize: designPixelToHeight(29),
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontFamily: 'Bold',
@@ -49,17 +54,17 @@ class _SeamlessdoctorState extends State<Page3> {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: designPixelToHeight(20),
                   ),
                   SizedBox(
-                    width: 300,
-                    height: 120,
+                    width: designPixelToWidth(300),
+                    height: designPixelToHeight(120),
                     child: Opacity(
                       opacity: 0.7,
                       child: Text(
                         'Skip the queue and Easily connect with top doctors at your fingertips.',
                         style: TextStyle(
-                            fontSize: 19,
+                            fontSize: designPixelToHeight(20),
                             color: Colors.black45,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Poppins',
@@ -78,11 +83,11 @@ class _SeamlessdoctorState extends State<Page3> {
               ),
             ),
             SizedBox(
-              height: 80,
+              height: designPixelToHeight(100),
             ),
             SizedBox(
-              height: 35,
-              width: 320,
+              height: designPixelToHeight(35),
+              width: designPixelToWidth(320),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -96,7 +101,7 @@ class _SeamlessdoctorState extends State<Page3> {
                     child: Text(
                       'Skip',
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 20,
                           fontFamily: 'Poppins',
                           color: Colors.grey,
                           shadows: [
@@ -115,14 +120,14 @@ class _SeamlessdoctorState extends State<Page3> {
                             text: ". ",
                             style: TextStyle(
                                 color: Colors.blue,
-                                fontSize: 21,
+                                fontSize: 22,
                                 fontWeight: FontWeight.bold),
                           ),
                           TextSpan(
                             text: '. . .',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
-                              fontSize: 20,
+                              fontSize: designPixelToHeight(21),
                               color: Colors.grey,
                             ),
                           ),
@@ -138,7 +143,7 @@ class _SeamlessdoctorState extends State<Page3> {
                     child: Text(
                       'Next',
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: Colors.blueAccent,
                       ),

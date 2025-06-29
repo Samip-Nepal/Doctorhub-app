@@ -1,4 +1,5 @@
 import 'package:doctor_app_pratice/User-Auth/loginpage/forgetpassword/button.dart';
+import 'package:doctor_app_pratice/User-Auth/loginpage/verificationcode/opt.dart';
 import 'package:flutter/material.dart';
 
 class Forgotpassword extends StatelessWidget {
@@ -6,54 +7,58 @@ class Forgotpassword extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
           children: [
             SizedBox(
-              height: 160,
+              height: designPixelToHeight(160),
             ),
             SizedBox(
-                width: 310,
-                height: 208,
+                width: designPixelToWidth(310),
+                height: designPixelToHeight(208),
                 child: Image.asset('assets/forgetpassword/Group.png')),
             SizedBox(
-              height: 60,
+              height: designPixelToHeight(60),
             ),
             SizedBox(
-              width: 290,
-              height: 43,
+              width: designPixelToWidth(290),
+              height: designPixelToHeight(43),
               child: Text(
                 'Forgot Password?',
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 28,
+                  fontSize: designPixelToHeight(30),
                   fontWeight: FontWeight.w800,
                   fontFamily: 'Monstserrat',
                 ),
               ),
             ),
             SizedBox(
-              height: 20,
+              height: designPixelToHeight(22),
             ),
             SizedBox(
-              width: 290,
-              height: 70,
+              width: designPixelToWidth(290),
+              height: designPixelToHeight(70),
               child: Text(
                   'Don’t worry! it happens. Please enter the address associated with your account.',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 13,
+                    fontSize: designPixelToHeight(14),
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w400,
                   )),
             ),
             SizedBox(
-              height: 10,
+              height: designPixelToHeight(13),
             ),
             SizedBox(
-              width: 310,
+              width: designPixelToWidth(310),
               child: TextField(
                 decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
@@ -67,7 +72,7 @@ class Forgotpassword extends StatelessWidget {
                   labelText: 'Email',
                   labelStyle: TextStyle(
                     color: Colors.grey,
-                    fontSize: 20,
+                    fontSize: designPixelToHeight(24),
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w400,
                   ),
@@ -75,9 +80,15 @@ class Forgotpassword extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: designPixelToHeight(60),
             ),
-            Buttons(),
+            Buttons(
+              name: 'Submit',
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context, MaterialPageRoute(builder: (context) => Otp()));
+              },
+            ),
           ],
         ),
       ),

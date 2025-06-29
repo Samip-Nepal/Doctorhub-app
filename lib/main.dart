@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home:Doctorhub() ,
+    home: Doctorhub(),
     routes: {
       'page1': (context) => Doccure(),
       'page2': (context) => Doctorhub(),

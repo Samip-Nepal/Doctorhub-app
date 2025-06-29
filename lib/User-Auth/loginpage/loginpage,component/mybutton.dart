@@ -10,6 +10,10 @@ class Button extends StatefulWidget {
 class _ButtonState extends State<Button> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Center(
       child: GestureDetector(
         onTap: () {},
@@ -18,14 +22,16 @@ class _ButtonState extends State<Button> {
             color: Colors.blue,
             borderRadius: BorderRadius.circular(10),
           ),
-          padding: EdgeInsets.symmetric(vertical: 8, horizontal: 140),
+          padding: EdgeInsets.symmetric(
+              vertical: designPixelToHeight(8),
+              horizontal: designPixelToWidth(140)),
           margin: EdgeInsets.symmetric(vertical: 25),
           child: Text(
             'Login',
             style: TextStyle(
                 color: Colors.white,
                 fontFamily: 'Poppins',
-                fontSize: 20,
+                fontSize: designPixelToHeight(20),
                 fontWeight: FontWeight.bold),
           ),
         ),

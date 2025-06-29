@@ -17,6 +17,11 @@ class _LoginpageState extends State<Loginpage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
+    double designPixelToHeight(double px) => (px / 932) * screenHeight;
+    double designPixelToWidth(double px) => (px / 430) * screenWidth;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -24,22 +29,22 @@ class _LoginpageState extends State<Loginpage> {
           child: Column(
             children: [
               SizedBox(
-                height: 60.67,
+                height: designPixelToHeight(60.67),
               ),
               SizedBox(
-                height: 170.86,
-                width: 310,
+                height: designPixelToHeight(170.86),
+                width: designPixelToWidth(310),
                 child: Image.asset('assets/user-auth/loginpage.png'),
               ),
               Container(
-                width: 120,
-                height: 50,
+                width: designPixelToWidth(120),
+                height: designPixelToHeight(50),
                 margin: EdgeInsets.fromLTRB(20, 20, 180, 30),
                 child: Text(
                   'Log In',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 36,
+                    fontSize: designPixelToHeight(36),
                     fontWeight: FontWeight.w800,
                     fontFamily: 'Monstserrat',
                   ),
@@ -58,7 +63,7 @@ class _LoginpageState extends State<Loginpage> {
                 image: Image.asset('assets/user-auth/LOCK.png'),
               ),
               SizedBox(
-                height: 10,
+                height: designPixelToHeight(10),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -83,7 +88,7 @@ class _LoginpageState extends State<Loginpage> {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: designPixelToHeight(10),
               ),
               Button(),
               Padding(
