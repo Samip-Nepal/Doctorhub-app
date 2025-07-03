@@ -7,6 +7,20 @@ import 'package:doctor_app_pratice/firstloading/Walkthrought/page5.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
+  // if (kIsWeb) {
+  //   await Firebase.initializeApp(
+  //     options: FirebaseOptions(
+  //         apiKey: "AIzaSyAzyI5fu2P7AYeoWW2tvUBmen7zj9exVu8",
+  //         authDomain: "doctorhub-655af.firebaseapp.com",
+  //         projectId: "doctorhub-655af",
+  //         storageBucket: "doctorhub-655af.firebasestorage.app",
+  //         messagingSenderId: "557356742301",
+  //         appId: "1:557356742301:web:a2af168885c58cf74dc674"),
+  //   );
+  // }
+
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Doctorhub(),

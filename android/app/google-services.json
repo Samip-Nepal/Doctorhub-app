@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "557356742301",
+    "project_id": "doctorhub-655af",
+    "storage_bucket": "doctorhub-655af.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557356742301:android:0151d8a456a107544dc674",
+        "android_client_info": {
+          "package_name": "com.doctorhub.doctor_app_pratice"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7ys-Tc9MvKkT7tSWs_YCpdo1lpLe7yqk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
