@@ -1,6 +1,6 @@
-import 'package:doctor_app_pratice/User-Auth/loginpage/forgetpassword/button.dart';
-import 'package:doctor_app_pratice/User-Auth/loginpage/verificationcode/otpcomponet.dart';
-import 'package:doctor_app_pratice/User-Auth/loginpage/phonenumbersucess/verifyphonenumber.dart';
+import 'package:doctor_app_pratice/presentation/ui_components/button.dart';
+import 'package:doctor_app_pratice/presentation/screens/loginpage/verificationcode/otpcomponet.dart';
+import 'package:doctor_app_pratice/presentation/screens/loginpage/phonenumbersucess/verifyphonenumber.dart';
 import 'package:flutter/material.dart';
 
 class Otp extends StatelessWidget {

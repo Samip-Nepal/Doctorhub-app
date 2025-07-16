@@ -1,14 +1,14 @@
-import 'package:doctor_app_pratice/firstloading/Walkthrought/page4.dart';
+import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/Role/page6.dart';
 import 'package:flutter/material.dart';
 
-class Page3 extends StatefulWidget {
-  const Page3({super.key});
+class Page5 extends StatefulWidget {
+  const Page5({super.key});
 
   @override
-  State<Page3> createState() => _SeamlessdoctorState();
+  State<Page5> createState() => _SeamlessdoctorState();
 }
 
-class _SeamlessdoctorState extends State<Page3> {
+class _SeamlessdoctorState extends State<Page5> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -16,25 +16,22 @@ class _SeamlessdoctorState extends State<Page3> {
 
     double designPixelToHeight(double px) => (px / 932) * screenHeight;
     double designPixelToWidth(double px) => (px / 430) * screenWidth;
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            SizedBox(
-              height: designPixelToHeight(97),
-            ),
+            SizedBox(height: designPixelToHeight(97)),
             SizedBox(
               height: designPixelToHeight(359),
-              width: designPixelToWidth(314),
-              child: Image.asset('assets/splash/Page3logo.png'),
+              width: designPixelToWidth(342),
+              child: Image.asset('assets/splash/Delivery5.png'),
             ),
+            SizedBox(height: designPixelToHeight(15)),
             SizedBox(
-              height: designPixelToHeight(15),
-            ),
-            SizedBox(
-              width: designPixelToWidth(300),
+              width: designPixelToWidth(340),
               height: designPixelToHeight(220),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -43,9 +40,9 @@ class _SeamlessdoctorState extends State<Page3> {
                     width: designPixelToWidth(300),
                     height: designPixelToHeight(80),
                     child: Text(
-                      'Seamless Doctor Connections',
+                      'Find Pharmacies Nearby',
                       style: TextStyle(
-                        fontSize: designPixelToHeight(29),
+                        fontSize: designPixelToHeight(27),
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontFamily: 'Bold',
@@ -53,28 +50,21 @@ class _SeamlessdoctorState extends State<Page3> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SizedBox(
-                    height: designPixelToHeight(20),
-                  ),
+                  SizedBox(height: designPixelToHeight(20)),
                   SizedBox(
                     width: designPixelToWidth(300),
                     height: designPixelToHeight(120),
                     child: Opacity(
                       opacity: 0.7,
                       child: Text(
-                        'Skip the queue and Easily connect with top doctors at your fingertips.',
+                        'Need a pharmacy? Our platform locates the nearest ones '
+                        'for you. Prioritize your comfort.',
                         style: TextStyle(
-                            fontSize: designPixelToHeight(20),
-                            color: Colors.black45,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Poppins',
-                            shadows: [
-                              Shadow(
-                                offset: Offset(3, 3),
-                                color: Colors.grey.withOpacity(0.5),
-                                blurRadius: 5,
-                              )
-                            ]),
+                          fontSize: designPixelToHeight(17),
+                          color: Colors.black45,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'Poppins',
+                        ),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -82,9 +72,7 @@ class _SeamlessdoctorState extends State<Page3> {
                 ],
               ),
             ),
-            SizedBox(
-              height: designPixelToHeight(100),
-            ),
+            SizedBox(height: designPixelToHeight(100)),
             SizedBox(
               height: designPixelToHeight(35),
               width: designPixelToWidth(320),
@@ -93,38 +81,51 @@ class _SeamlessdoctorState extends State<Page3> {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (contect) => Page4())); //In case of .
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Page6()));
                     },
                     child: Text(
                       'Skip',
                       style: TextStyle(
-                          fontSize: 20,
-                          fontFamily: 'Poppins',
-                          color: Colors.grey,
-                          shadows: [
-                            Shadow(
-                              blurRadius: 0,
-                            ),
-                          ]),
+                        fontSize: designPixelToHeight(20),
+                        fontFamily: 'Poppins',
+                        color: Colors.grey,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 0,
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+                    padding: EdgeInsets.fromLTRB(
+                      0,
+                      0,
+                      0,
+                      designPixelToHeight(10),
+                    ),
                     child: RichText(
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: ". ",
+                            text: '. . ',
                             style: TextStyle(
-                                color: Colors.blue,
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold),
+                              fontWeight: FontWeight.bold,
+                              fontSize: designPixelToHeight(21),
+                              color: Colors.grey,
+                            ),
                           ),
                           TextSpan(
-                            text: '. . .',
+                            text: ". ",
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: designPixelToHeight(22),
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          TextSpan(
+                            text: '.',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: designPixelToHeight(21),
@@ -138,12 +139,12 @@ class _SeamlessdoctorState extends State<Page3> {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Page4()));
+                          MaterialPageRoute(builder: (context) => Page6()));
                     },
                     child: Text(
                       'Next',
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: designPixelToHeight(20),
                         fontWeight: FontWeight.bold,
                         color: Colors.blueAccent,
                       ),

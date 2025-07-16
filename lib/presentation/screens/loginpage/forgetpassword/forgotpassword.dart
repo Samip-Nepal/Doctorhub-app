@@ -1,5 +1,5 @@
-import 'package:doctor_app_pratice/User-Auth/loginpage/forgetpassword/button.dart';
-import 'package:doctor_app_pratice/User-Auth/loginpage/verificationcode/opt.dart';
+import 'package:doctor_app_pratice/presentation/ui_components/button.dart';
+import 'package:doctor_app_pratice/presentation/screens/loginpage/verificationcode/opt.dart';
 import 'package:flutter/material.dart';
 
 class Forgotpassword extends StatelessWidget {

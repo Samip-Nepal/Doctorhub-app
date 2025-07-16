@@ -1,4 +1,4 @@
-import 'package:doctor_app_pratice/firstloading/Walkthrought/page3.dart';
+import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/page3.dart';
 import 'package:flutter/material.dart';
 
 class Doccure extends StatefulWidget {
