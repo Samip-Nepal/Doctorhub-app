@@ -1,6 +1,6 @@
-import 'package:doctor_app_pratice/presentation/ui_components/button.dart';
+import 'package:doctor_app_pratice/presentation/screens/loginpage/Sucessopt/success.dart';
 import 'package:doctor_app_pratice/presentation/screens/loginpage/verificationcode/otpcomponet.dart';
-import 'package:doctor_app_pratice/presentation/screens/loginpage/phonenumbersucess/verifyphonenumber.dart';
+import 'package:doctor_app_pratice/presentation/ui_components/button.dart';
 import 'package:flutter/material.dart';
 
 class Otp extends StatelessWidget {
@@ -79,7 +79,7 @@ class Otp extends StatelessWidget {
                   name: 'Verify',
                   onPressed: () {
                     Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => Phonenumber()));
+                        MaterialPageRoute(builder: (context) => Success()));
                   },
                 ),
               ],

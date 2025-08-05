@@ -4,11 +4,12 @@ import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrough
 import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/page3.dart';
 import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/page4.dart';
 import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/page5.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // await Firebase.initializeApp();
+  //await Firebase.initializeApp();
   // if (kIsWeb) {
   //   await Firebase.initializeApp(
   //     options: FirebaseOptions(
