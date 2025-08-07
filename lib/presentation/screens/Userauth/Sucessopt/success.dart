@@ -1,3 +1,4 @@
+import 'package:doctor_app_pratice/presentation/screens/Userauth/Resetpassword/reset.dart';
 import 'package:doctor_app_pratice/presentation/ui_components/button.dart';
 import 'package:flutter/material.dart';
 
@@ -65,13 +66,13 @@ class _SucessState extends State<Success> {
                 ),
               ),
               SizedBox(
-                height: designPixelToHeight(90),
+                height: designPixelToHeight(80),
               ),
               Buttons(
                 name: 'Continue',
                 onPressed: () {
                   Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => Success()));
+                      MaterialPageRoute(builder: (context) => Reset()));
                 },
               ),
             ],

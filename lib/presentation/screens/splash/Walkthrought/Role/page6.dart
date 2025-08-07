@@ -1,4 +1,4 @@
-import 'package:doctor_app_pratice/presentation/screens/loginpage/loginpage,component/loginpage.dart';
+import 'package:doctor_app_pratice/presentation/screens/Userauth/loginpage,component/loginpage.dart';
 import 'package:flutter/material.dart';
 
 class Page6 extends StatefulWidget {

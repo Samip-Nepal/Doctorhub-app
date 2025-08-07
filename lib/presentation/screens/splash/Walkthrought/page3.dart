@@ -1,4 +1,4 @@
-import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/page4.dart';
+import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/page4.dart';
 import 'package:flutter/material.dart';
 
 class Page3 extends StatefulWidget {

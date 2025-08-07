@@ -1,5 +1,5 @@
-import 'package:doctor_app_pratice/presentation/screens/loginpage/signuppage/signupcomponent.dart';
-import 'package:doctor_app_pratice/presentation/screens/loginpage/signuppage/terms,condition.dart';
+import 'package:doctor_app_pratice/presentation/screens/Userauth/signuppage/signupcomponent.dart';
+import 'package:doctor_app_pratice/presentation/screens/Userauth/signuppage/terms,condition.dart';
 import 'package:flutter/material.dart';
 
 class SignUp extends StatefulWidget {

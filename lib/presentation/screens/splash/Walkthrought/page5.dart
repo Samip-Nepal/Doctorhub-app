@@ -1,9 +1,14 @@
-import 'package:doctor_app_pratice/presentation/screens/firstloading/Walkthrought/page5.dart';
+import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/Role/page6.dart';
 import 'package:flutter/material.dart';
 
-class Page4 extends StatelessWidget {
-  const Page4({super.key});
+class Page5 extends StatefulWidget {
+  const Page5({super.key});
 
+  @override
+  State<Page5> createState() => _SeamlessdoctorState();
+}
+
+class _SeamlessdoctorState extends State<Page5> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -21,8 +26,8 @@ class Page4 extends StatelessWidget {
             SizedBox(height: designPixelToHeight(97)),
             SizedBox(
               height: designPixelToHeight(359),
-              width: designPixelToWidth(314),
-              child: Image.asset('assets/splash/Pag4.png'),
+              width: designPixelToWidth(342),
+              child: Image.asset('assets/splash/Delivery5.png'),
             ),
             SizedBox(height: designPixelToHeight(15)),
             SizedBox(
@@ -35,10 +40,9 @@ class Page4 extends StatelessWidget {
                     width: designPixelToWidth(300),
                     height: designPixelToHeight(80),
                     child: Text(
-                      'Medications at Your Doorsteps',
+                      'Find Pharmacies Nearby',
                       style: TextStyle(
-                        fontSize:
-                            designPixelToHeight(30), 
+                        fontSize: designPixelToHeight(27),
                         color: Colors.black,
                         fontWeight: FontWeight.w700,
                         fontFamily: 'Bold',
@@ -53,9 +57,10 @@ class Page4 extends StatelessWidget {
                     child: Opacity(
                       opacity: 0.7,
                       child: Text(
-                        'Say goodbye to pharmacy lines. Enjoy the convenience of hassle-free medication.',
+                        'Need a pharmacy? Our platform locates the nearest ones '
+                        'for you. Prioritize your comfort.',
                         style: TextStyle(
-                          fontSize: designPixelToHeight(19),
+                          fontSize: designPixelToHeight(17),
                           color: Colors.black45,
                           fontWeight: FontWeight.w600,
                           fontFamily: 'Poppins',
@@ -77,7 +82,7 @@ class Page4 extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Page5()));
+                          MaterialPageRoute(builder: (context) => Page6()));
                     },
                     child: Text(
                       'Skip',
@@ -85,17 +90,26 @@ class Page4 extends StatelessWidget {
                         fontSize: designPixelToHeight(20),
                         fontFamily: 'Poppins',
                         color: Colors.grey,
+                        shadows: [
+                          Shadow(
+                            blurRadius: 0,
+                          ),
+                        ],
                       ),
                     ),
                   ),
                   Container(
-                    padding:
-                        EdgeInsets.fromLTRB(0, 0, 0, designPixelToHeight(10)),
+                    padding: EdgeInsets.fromLTRB(
+                      0,
+                      0,
+                      0,
+                      designPixelToHeight(10),
+                    ),
                     child: RichText(
                       text: TextSpan(
                         children: [
                           TextSpan(
-                            text: '. ',
+                            text: '. . ',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: designPixelToHeight(21),
@@ -103,7 +117,7 @@ class Page4 extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text: ".",
+                            text: ". ",
                             style: TextStyle(
                               color: Colors.blue,
                               fontSize: designPixelToHeight(22),
@@ -111,7 +125,7 @@ class Page4 extends StatelessWidget {
                             ),
                           ),
                           TextSpan(
-                            text: ' . .',
+                            text: '.',
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: designPixelToHeight(21),
@@ -125,7 +139,7 @@ class Page4 extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Page5()));
+                          MaterialPageRoute(builder: (context) => Page6()));
                     },
                     child: Text(
                       'Next',

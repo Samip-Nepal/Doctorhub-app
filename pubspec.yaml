@@ -68,6 +68,7 @@ flutter:
     - assets/signuppage/
     - assets/forgetpassword/
     - assets/otp/
+    - assets/resetpassword/
    
 
   # An image asset can refer to one or more resolution-specific "variants", see

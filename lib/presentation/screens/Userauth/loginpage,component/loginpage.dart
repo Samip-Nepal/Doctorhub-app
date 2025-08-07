@@ -1,7 +1,7 @@
-import 'package:doctor_app_pratice/presentation/screens/loginpage/forgetpassword/forgotpassword.dart';
-import 'package:doctor_app_pratice/presentation/screens/loginpage/loginpage,component/my_textfeild.dart';
-import 'package:doctor_app_pratice/presentation/screens/loginpage/loginpage,component/mybutton.dart';
-import 'package:doctor_app_pratice/presentation/screens/loginpage/signuppage/sign_up.dart';
+import 'package:doctor_app_pratice/presentation/screens/Userauth/forgetpassword/forgotpassword.dart';
+import 'package:doctor_app_pratice/presentation/ui_components/my_textfeild.dart';
+import 'package:doctor_app_pratice/presentation/screens/Userauth/loginpage,component/mybutton.dart';
+import 'package:doctor_app_pratice/presentation/screens/Userauth/signuppage/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class Loginpage extends StatefulWidget {

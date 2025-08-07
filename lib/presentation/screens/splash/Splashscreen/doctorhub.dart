@@ -1,4 +1,4 @@
-import 'package:doctor_app_pratice/presentation/screens/firstloading/Splashscreen/doccure.dart';
+import 'package:doctor_app_pratice/presentation/screens/splash/Splashscreen/doccure.dart';
 import 'package:flutter/material.dart';
 
 class Doctorhub extends StatefulWidget {
