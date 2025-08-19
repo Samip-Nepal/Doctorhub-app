@@ -1,10 +1,10 @@
+import 'package:doctor_app_pratice/presentation/screens/Userauth/internetdisconnect/disconnect.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Splashscreen/doccure.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Splashscreen/doctorhub.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/Role/page6.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/page3.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/page4.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/page5.dart';
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,7 +24,7 @@ void main() {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Doctorhub(),
+    home: Disconnect(),
     routes: {
       'page1': (context) => Doccure(),
       'page2': (context) => Doctorhub(),

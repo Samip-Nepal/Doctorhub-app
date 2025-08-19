@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   #firebase_core: ^4.0.0
   #firebase_auth: ^6.0.0
+  floating_navbar: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +70,8 @@ flutter:
     - assets/forgetpassword/
     - assets/otp/
     - assets/resetpassword/
+    - assets/disconnected/disconnect.png
+
    
 
   # An image asset can refer to one or more resolution-specific "variants", see
