@@ -1,4 +1,4 @@
-import 'package:doctor_app_pratice/presentation/screens/Userauth/internetdisconnect/disconnect.dart';
+import 'package:doctor_app_pratice/datepicker.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Splashscreen/doccure.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Splashscreen/doctorhub.dart';
 import 'package:doctor_app_pratice/presentation/screens/splash/Walkthrought/Role/page6.dart';
@@ -24,7 +24,7 @@ void main() {
 
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: Disconnect(),
+    home: Datepicker(),
     routes: {
       'page1': (context) => Doccure(),
       'page2': (context) => Doctorhub(),
